@@ -1,3 +1,170 @@
+<a name="5.1.3"></a>
+## [5.1.3](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.1.2...5.1.3) (2018-08-10)
+
+
+### Features
+
+* **export:** fix access data in object export ([f141fb1](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/f141fb1))
+
+
+
+<a name="5.1.2"></a>
+## [5.1.2](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.1.1...5.1.2) (2018-08-10)
+
+
+
+<a name="5.1.1"></a>
+## [5.1.1](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.1.0...5.1.1) (2018-08-10)
+
+
+### Features
+
+* **search:** add collection API to search field ([d032f8b](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/d032f8b))
+
+
+
+<a name="5.1.0"></a>
+# [5.1.0](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.0...5.1.0) (2018-06-29)
+
+
+### Bug Fixes
+
+* **css:** improve search form appearance ([58dc114](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/58dc114))
+* **css:** search form no longer overflows sidebar ([f9dd1e6](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/f9dd1e6))
+* **css:** sidebar search form no longer overflows ([b37bd67](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/b37bd67))
+* **data:** data export endpoints now work as expected ([4f3096c](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/4f3096c))
+* **js:** correctly scroll to top of the list on pagination ([710bb02](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/710bb02))
+* **js:** use elgg/Ajax module for ajax calls ([c1ca719](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/c1ca719))
+* **search:** use core styles for the search form ([262bbb9](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/262bbb9))
+* **sidebar:** only show comments block if entities use comments ([be9e946](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/be9e946))
+* **sorter:** sorting by member count now works as expected ([88f1aee](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/88f1aee))
+* **sorts:** correctly validate type ([52ccd52](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/52ccd52))
+* **sorts:** simplify sorting registration ([e00d199](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/e00d199))
+
+
+### Features
+
+* **core:** updates and fixes ([fe5d772](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/fe5d772))
+* **filters:** add option to search by post owner ([b3e231f](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/b3e231f))
+
+
+
+<a name="5.0.10"></a>
+## [5.0.10](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.9...5.0.10) (2018-05-07)
+
+
+### Bug Fixes
+
+* **sorts:** correctly validate type ([52ccd52](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/52ccd52))
+* **sorts:** simplify sorting registration ([e00d199](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/e00d199))
+
+
+### Features
+
+* **filters:** add option to search by post owner ([b3e231f](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/b3e231f))
+
+
+
+<a name="5.0.9"></a>
+## [5.0.9](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.8...5.0.9) (2018-04-27)
+
+
+### Bug Fixes
+
+* **js:** correctly scroll to top of the list on pagination ([710bb02](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/710bb02))
+
+
+
+<a name="5.0.8"></a>
+## [5.0.8](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.7...5.0.8) (2018-04-26)
+
+
+### Bug Fixes
+
+* **js:** use elgg/Ajax module for ajax calls ([c1ca719](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/c1ca719))
+
+
+
+<a name="5.0.7"></a>
+## [5.0.7](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.6...5.0.7) (2018-04-19)
+
+
+### Bug Fixes
+
+* **css:** improve search form appearance ([58dc114](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/58dc114))
+
+
+
+<a name="5.0.6"></a>
+## [5.0.6](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.5...5.0.6) (2018-04-06)
+
+
+### Bug Fixes
+
+* **search:** use core styles for the search form ([262bbb9](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/262bbb9))
+
+
+
+<a name="5.0.5"></a>
+## [5.0.5](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.4...5.0.5) (2018-04-03)
+
+
+### Bug Fixes
+
+* **css:** sidebar search form no longer overflows ([b37bd67](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/b37bd67))
+
+
+
+<a name="5.0.4"></a>
+## [5.0.4](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.3...5.0.4) (2018-04-03)
+
+
+### Bug Fixes
+
+* **css:** search form no longer overflows sidebar ([f9dd1e6](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/f9dd1e6))
+
+
+
+<a name="5.0.3"></a>
+## [5.0.3](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.2...5.0.3) (2018-03-23)
+
+
+### Bug Fixes
+
+* **sidebar:** only show comments block if entities use comments ([be9e946](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/be9e946))
+
+
+
+<a name="5.0.2"></a>
+## [5.0.2](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.1...5.0.2) (2018-03-22)
+
+
+### Bug Fixes
+
+* **data:** data export endpoints now work as expected ([4f3096c](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/4f3096c))
+
+
+
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/5.0.0...5.0.1) (2018-03-22)
+
+
+### Bug Fixes
+
+* **sorter:** sorting by member count now works as expected ([88f1aee](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/88f1aee))
+
+
+
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/hypeJunctionPro/Elgg3-hypeLists/compare/4.1.6...5.0.0) (2018-03-19)
+
+
+### Features
+
+* **releases:** upgrade for Elgg 3 ([f777e54](https://github.com/hypeJunctionPro/Elgg3-hypeLists/commit/f777e54))
+
+
+
 <a name="4.1.6"></a>
 ## [4.1.6](https://github.com/hypeJunction/hypeLists/compare/4.1.5...v4.1.6) (2017-04-21)
 

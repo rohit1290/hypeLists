@@ -1,13 +1,13 @@
 {
 	"name": "hypejunction/hypelists",
-	"version": "4.1.6",
+	"version": "5.1.3",
 	"type": "elgg-plugin",
 	"description": "AJAX lists for Elgg",
 	"homepage": "http://hypejunction.com/",
 	"keywords": [
 		"elgg", "plugin", "hypejunction", "hypelist", "lists", "ajax"
 	],
-	"license": "GPL-2.0",
+	"license": "proprietary",
 	"authors": [{
 			"name": "Ismayil Khayredinov",
 			"email": "info@hypejunction.com"
