@@ -12,14 +12,12 @@ require_once __DIR__ . '/autoloader.php';
 /**
  * Wrap list views into a container that can be manipulated
  *
- * @param string $hook   "view"
- * @param string $type   "page/components/list" or "page/components/gallery"
- * @param string $view   View
- * @param array  $params Hook params
- *
  * @return string Wrapped view
  */
-function hypelists_wrap_list_view_hook($hook, $type, $view, $params) {
+function hypelists_wrap_list_view_hook(\Elgg\Hook $hook) {
+	$type = $hook->getType();
+	$view = $hook->getValue();
+	$params = $hook->getParams();
 
 	$viewtype = elgg_extract('viewtype', $params, 'default');
 	if ($viewtype !== 'default') {
@@ -100,15 +98,10 @@ function hypelists_wrap_list_view_hook($hook, $type, $view, $params) {
 /**
  * Filters some of the view vars
  *
- * @param string $hook   "view_vars"
- * @param string $type   List view name
- * @param array  $vars   View vars
- * @param array  $params Hook params
- *
  * @return array
  */
-function hypelists_filter_vars($hook, $type, $vars, $params) {
-
+function hypelists_filter_vars(\Elgg\Hook $hook) {
+	$vars = $hook->getValue();
 	$vars['base_url'] = hypelists_prepare_base_url(elgg_extract('base_url', $vars));
 
 	return $vars;
@@ -199,28 +192,13 @@ return function () {
 		elgg_extend_view('elgg.css', 'forms/collection/search.css');
 
 		elgg_register_plugin_hook_handler('adapter:entity', 'all', [\hypeJunction\Data\Extender::class, 'addData']);
-		elgg_register_plugin_hook_handler('adapter:entity', 'all', [
-			\hypeJunction\Data\Extender::class,
-			'addPermissions'
-		]);
+		elgg_register_plugin_hook_handler('adapter:entity', 'all', [\hypeJunction\Data\Extender::class,	'addPermissions']);
 		elgg_register_plugin_hook_handler('adapter:entity', 'all', [\hypeJunction\Data\Extender::class, 'addCounters']);
-		elgg_register_plugin_hook_handler('adapter:entity', 'all', [
-			\hypeJunction\Data\Extender::class,
-			'addDataLinks'
-		]);
+		elgg_register_plugin_hook_handler('adapter:entity', 'all', [\hypeJunction\Data\Extender::class, 'addDataLinks']);
 
-		elgg_register_plugin_hook_handler('adapter:entity', 'user', [
-			\hypeJunction\Data\Extender::class,
-			'addUserData'
-		]);
-		elgg_register_plugin_hook_handler('adapter:entity', 'group', [
-			\hypeJunction\Data\Extender::class,
-			'addGroupData'
-		]);
-		elgg_register_plugin_hook_handler('adapter:entity', 'object', [
-			\hypeJunction\Data\Extender::class,
-			'addObjectData'
-		]);
+		elgg_register_plugin_hook_handler('adapter:entity', 'user', [\hypeJunction\Data\Extender::class, 'addUserData']);
+		elgg_register_plugin_hook_handler('adapter:entity', 'group', [\hypeJunction\Data\Extender::class, 'addGroupData']);
+		elgg_register_plugin_hook_handler('adapter:entity', 'object', [\hypeJunction\Data\Extender::class, 'addObjectData']);
 
 		elgg_register_collection('collection:default', \hypeJunction\Lists\DefaultEntityCollection::class);
 
