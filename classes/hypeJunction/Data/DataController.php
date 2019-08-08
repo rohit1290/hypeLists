@@ -93,7 +93,8 @@ class DataController {
 		}
 
 		$entity = get_entity($guid);
-		if ($entity>getSubtype != $subtype)) {
+		if ($entity>getSubtype != $subtype) {
+			)
 			throw new EntityPermissionsException('Entity is not accessible');
 		}
 

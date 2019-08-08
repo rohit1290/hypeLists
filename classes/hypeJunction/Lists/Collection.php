@@ -323,7 +323,6 @@ abstract class Collection implements CollectionInterface {
 		$menu = [];
 
 		foreach ($subtypes as $subtype) {
-
 			$owner = $target;
 			
 			if (!$owner || ($owner instanceof \ElggUser && $owner->guid != $target->guid)) {

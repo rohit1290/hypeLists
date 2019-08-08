@@ -77,5 +77,3 @@ $object_list->setOptions($options)
 	->setQuery($query);
 
 echo $object_list->render();
-
-

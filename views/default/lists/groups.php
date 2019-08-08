@@ -75,5 +75,3 @@ $group_list->setOptions($options)
 	->setQuery($query);
 
 echo $group_list->render();
-
-

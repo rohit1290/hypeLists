@@ -23,7 +23,6 @@ switch ($widget->context) {
 			$collection = "collection:$type:$subtype:group";
 		}
 		break;
-
 }
 
 $params = $vars;

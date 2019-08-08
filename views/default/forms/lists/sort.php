@@ -9,7 +9,7 @@ $fields = '';
 if (elgg_extract('show_subtype', $vars, false)) {
 	$subtypes = elgg_extract('subtype_options', $vars);
 	if (!empty($subtypes)) {
-		$subtype_options_values = array('' => elgg_echo("sort:$entity_type:subtype:all"));
+		$subtype_options_values = ['' => elgg_echo("sort:$entity_type:subtype:all")];
 		foreach ($subtypes as $subtype) {
 			$subtype_options_values[$subtype] = elgg_echo("item:$entity_type:$subtype");
 		}
@@ -32,7 +32,7 @@ if (elgg_extract('show_subtype', $vars, false)) {
 if (elgg_extract('show_filter', $vars, false)) {
 	$filter_options = elgg_extract('filter_options', $vars);
 	if (!empty($filter_options)) {
-		$filter_options_values = array();
+		$filter_options_values = [];
 		foreach ($filter_options as $filter_option) {
 			$filter_options_values[$filter_option] = elgg_echo("sort:$entity_type:filter:$filter_option");
 		}
@@ -63,7 +63,7 @@ if (elgg_extract('show_search', $vars, false)) {
 if (elgg_extract('show_sort', $vars, false)) {
 	$sort_options = elgg_extract('sort_options', $vars);
 	if (!empty($sort_options)) {
-		$sort_options_values = array();
+		$sort_options_values = [];
 		foreach ($sort_options as $sort_option) {
 			$sort_options_values[$sort_option] = elgg_echo("sort:$entity_type:$sort_option");
 		}

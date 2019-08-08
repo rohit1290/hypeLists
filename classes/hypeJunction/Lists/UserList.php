@@ -21,9 +21,9 @@ class UserList extends EntityList {
 	public function getFilterOptions() {
 		$options = $this->getOptions();
 
-		$filter_options = array(
+		$filter_options = [
 			'',
-		);
+		];
 
 		if (elgg_is_logged_in()) {
 			$filter_options[] = 'friend';
@@ -66,7 +66,6 @@ class UserList extends EntityList {
 			";
 
 		switch ($field) {
-
 			case 'type' :
 			case 'subtype' :
 			case 'guid' :
@@ -125,10 +124,10 @@ class UserList extends EntityList {
 
 		$options['order_by'] = implode(', ', array_unique(array_filter($order_by)));
 
-		$params = array(
+		$params = [
 			'field' => $field,
 			'direction' => $direction,
-		);
+		];
 
 		return elgg_trigger_plugin_hook('sort_options', 'user', $params, $options);
 	}
@@ -193,7 +192,7 @@ class UserList extends EntityList {
 					ON n_table.value_id = metadata_fields_msv.id
 				";
 
-			$clauses = _elgg_entities_get_metastrings_options('metadata', array(
+			$clauses = _elgg_entities_get_metastrings_options('metadata', [
 				'metadata_names' => $metadata_fields,
 				'metadata_values' => null,
 				'metadata_name_value_pairs' => null,
@@ -201,7 +200,7 @@ class UserList extends EntityList {
 				'metadata_case_sensitive' => null,
 				'order_by_metadata' => null,
 				'metadata_owner_guids' => null,
-			));
+			]);
 
 			$options['joins'] = array_merge($clauses['joins'], $options['joins']);
 			$metadata_fields_md_where = "(({$clauses['wheres'][0]}) AND metadata_fields_msv.string LIKE '%$query%')";
@@ -228,7 +227,6 @@ class UserList extends EntityList {
 		$guid = (int) $target->guid;
 
 		switch ($filter) {
-
 			case 'not_self' :
 				$options['wheres']['filter_not_self'] = "e.guid != $guid";
 				break;
@@ -284,13 +282,13 @@ class UserList extends EntityList {
 				break;
 		}
 
-		$params = array(
+		$params = [
 			'filter' => $filter,
 			'target' => $target,
 			// BC
 			'rel' => $filter,
 			'page_owner' => $target,
-		);
+		];
 
 		$options = elgg_trigger_plugin_hook('rel_options', 'user', $params, $options); // BC hook
 		$options = elgg_trigger_plugin_hook('filter_options', 'user', $params, $options);

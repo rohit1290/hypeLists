@@ -20,7 +20,7 @@ class SubtypeFilter implements FilterInterface {
 	 * Build a filtering clause
 	 *
 	 * @param       $target \ElggEntity Target entity of the filtering relationship
-	 * @param array $params Filter params
+	 * @param array                                                          $params Filter params
 	 *
 	 * @return WhereClause|null
 	 */

@@ -73,5 +73,3 @@ $user_list->setOptions($options)
 	->setQuery($query);
 
 echo $user_list->render();
-
-
