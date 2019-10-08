@@ -56,8 +56,11 @@ function hypelists_init() {
  * @param array  $params Hook params
  * @return string Wrapped view
  */
-function hypelists_wrap_list_view_hook($hook, $type, $view, $params) {
-
+function hypelists_wrap_list_view_hook(\Elgg\Hook $hook) {
+	$type = $hook->getType();
+	$view = $hook->getValue();
+	$params = $hook->getParams();
+	
 	$viewtype = elgg_extract('viewtype', $params, 'default');
 	if ($viewtype !== 'default') {
 		return;
@@ -142,8 +145,8 @@ function hypelists_wrap_list_view_hook($hook, $type, $view, $params) {
  * @param array  $params Hook params
  * @return array
  */
-function hypelists_filter_vars($hook, $type, $vars, $params) {
-
+function hypelists_filter_vars(\Elgg\Hook $hook) {
+	$vars = $hook->getValue();
 	$vars['base_url'] = hypelists_prepare_base_url(elgg_extract('base_url', $vars));
 	return $vars;
 }
