@@ -94,7 +94,7 @@ if (elgg_extract('expand_form', $vars, true)) {
 		'text' => elgg_echo('sort:menu:filter'),
 		'class' => 'elgg-sortable-list-form-toggle',
 	]);
-	
+
 	echo elgg_format_element('div', [
 		'class' => 'elgg-sortable-list-fieldset hidden',
 	], $fields);

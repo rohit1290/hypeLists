@@ -79,7 +79,7 @@ define(function (require) {
 			} else {
 				var prev = self.options.activePage > 1 ? self.options.activePage - 1 : 1;
 				$paginationItems = $paginationItems.add(self.buildPaginationItem('prev', prev, false, self.options.activePage === 1));
-				
+
 				if (start >= 3) {
 					$paginationItems = $paginationItems.add(self.buildPaginationItem('', 1, false, false));
 					if (start === 3) {

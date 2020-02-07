@@ -62,10 +62,10 @@ foreach ($sort_options as $entity_type => $options) {
 			'value' => 1,
 			'checked' => ($entity->{"sort::$entity_type::$option"} == 1),
 		]);
-		
+
 		$checkboxes .= elgg_format_element('li', [], $input);
 	}
 	$list = elgg_format_element('ul', ['class' => 'elgg-checkboxes'], $checkboxes);
-	
+
 	echo elgg_view_module('info', elgg_echo("sort:settings:$entity_type"), $list);
 }

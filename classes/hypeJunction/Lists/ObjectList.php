@@ -40,7 +40,7 @@ class ObjectList extends EntityList {
 		if (!$subtypes) {
 			$subtypes = elgg_extract('subtypes', $options);
 		}
-		
+
 		if (!empty($subtypes)) {
 			$subtypes = (array) $subtypes;
 			$subtype = $subtypes[0];

@@ -55,7 +55,7 @@ abstract class EntityList {
 
 	/**
 	 * Set ege* options
-	 * 
+	 *
 	 * @param array $options Ege* options
 	 * @return self
 	 */
@@ -193,7 +193,7 @@ abstract class EntityList {
 
 	/**
 	 * Set sort field and direction
-	 * 
+	 *
 	 * @param string $field     Field name
 	 * @param string $direction Sort direction
 	 * @param int    $priority  Priority
@@ -333,7 +333,7 @@ abstract class EntityList {
 
 	/**
 	 * Add relationship filter
-	 * 
+	 *
 	 * @param string     $filter   Filter name
 	 * @param ElggEntity $target   Target entity
 	 * @param int        $priority Priority
@@ -384,7 +384,7 @@ abstract class EntityList {
 	 * Returns a where clause for a search query.
 	 *
 	 * @see search_get_where_sql
-	 * 
+	 *
 	 * @param str   $table        Prefix for table to search on
 	 * @param array $fields       Fields to match against
 	 * @param array $params       Original search params
@@ -469,7 +469,7 @@ abstract class EntityList {
 
 	/**
 	 * Returns list id
-	 * @return string 
+	 * @return string
 	 */
 	public function getId() {
 		$options = $this->getOptions();
@@ -496,7 +496,7 @@ abstract class EntityList {
 		$list = elgg_format_element('div', [
 			'class' => 'elgg-sortable-list-view',
 		], $list);
-		
+
 		if (empty($this->search_query) && empty($this->filters) && !preg_match_all("/<ul.*>.*<\/ul>/s", $list)) {
 			// List is empty
 			return $list;
