@@ -1,6 +1,8 @@
 <?php
+require_once(__DIR__ . "/lib/functions.php");
 
 return [
+	'bootstrap' => hypeLists::class,
 	'views' => [
 		'default' => [
 			'hypeList.js' => __DIR__ . '/views/default/components/list.js',

@@ -1,51 +1,4 @@
-<?php
-
-/**
- * hypeLists
- * Developer tools for managing and ajaxifying lists
- *
- * @package    Elgg
- * @subpackage hypeJunction\Lists
- *
- * @author      Ismayil Khayredinov <ismayil@hypejunction.com>
- * @copyright   Copyright (c) 2014 Ismayil Khayredinov
- *
- * hypeLists is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License version 2, as published by the
- * Free Software Foundation.
- *
- * You may NOT assume that you can use any other version of the GPL.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, it can be found here:
- * http://www.gnu.org/licenses/gpl-2.0.html
- */
-
-elgg_register_event_handler('init', 'system', 'hypelists_init');
-
-/**
- * Initialize the plugin
- * @return void
- */
-function hypelists_init() {
-	$defaults = array(
-		'page/components/list',
-		'page/components/gallery',
-		'page/components/ajax_list',
-	);
-
-	$views = elgg_trigger_plugin_hook('get_views', 'framework:lists', null, $defaults);
-	foreach ($views as $view) {
-		elgg_register_plugin_hook_handler('view', $view, 'hypelists_wrap_list_view_hook');
-		elgg_register_plugin_hook_handler('view_vars', $view, 'hypelists_filter_vars');
-	}
-
-	elgg_extend_view('elgg.css', 'forms/lists/sort.css');
-}
+<?php 
 
 /**
  * Wrap list views into a container that can be manipulated
@@ -60,7 +13,7 @@ function hypelists_wrap_list_view_hook(\Elgg\Hook $hook) {
 	$type = $hook->getType();
 	$view = $hook->getValue();
 	$params = $hook->getParams();
-	
+
 	$viewtype = elgg_extract('viewtype', $params, 'default');
 	if ($viewtype !== 'default') {
 		return;
@@ -74,7 +27,7 @@ function hypelists_wrap_list_view_hook(\Elgg\Hook $hook) {
 	if ($pagination === false) {
 		return;
 	}
-	
+
 	if (!$pagination && !$pagination_type) {
 		return;
 	}
@@ -167,7 +120,7 @@ function hypelists_prepare_base_url($base_url = null) {
 
 	// Need absolute URL (embed causes trouble)
 	$base_url = elgg_normalize_url($base_url);
-	
+
 	$base_url = elgg_http_remove_url_query_element($base_url, 'limit');
 	$base_url = elgg_http_remove_url_query_element($base_url, 'offset');
 
